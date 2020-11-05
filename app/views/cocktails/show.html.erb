@@ -1,9 +1,11 @@
-<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://loremflickr.com/1200/800/cocktail?random=56">
-  <%= @cocktail.name %>
-</div>
 <div class="container">
   <div class="row">
-    <div class="col-12 col-md-8">
+    <div class="col-12 col-md-4">
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://loremflickr.com/1200/800/cocktail?random=56">
+        <%= @cocktail.name %>
+      </div>
+    </div>
+    <div class="col-12 col-md-4">
       <div class="ingredients-box">
         <h4 class="mt-2 text-center">Ingredients</h4>
         <ul>
@@ -13,7 +15,7 @@
               <% end %> <%= dose.ingredient.name %>: <%= dose.description %>
             </li>
           <% end %>
-          <li><%= link_to "Add a dose", new_cocktail_dose_path(@cocktail), class: "text-info"%></li>
+          <li><%= link_to "Add an ingredient", new_cocktail_dose_path(@cocktail), class: "text-danger"%></li>
         </ul>
       </div>
     </div>

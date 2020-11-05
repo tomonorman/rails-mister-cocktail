@@ -9,3 +9,11 @@ require("@rails/activestorage").start()
 require("channels")
 
 import 'bootstrap';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { initSelect2 } from '../components/init_select2';
+
+document.addEventListener('turbolinks:load', () => {
+  AOS.init();
+  initSelect2();
+});

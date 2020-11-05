@@ -7,11 +7,16 @@
 @import "bootstrap/scss/bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import 'select2/dist/css/select2';
 
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
 
 body {
-  background-color: #d8e2dc;
+  background-color: #FFC233;
+}
+
+.select2 {
+width: 100% !important;
 }

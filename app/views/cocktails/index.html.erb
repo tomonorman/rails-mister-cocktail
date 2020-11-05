@@ -6,11 +6,13 @@
   </div>
 </div>
 <div class="container">
-  <div class="cards mt-3">
+  <div class="cards mt-4">
     <% @cocktails.each do |cocktail| %>
       <% url = "https://loremflickr.com/320/240/cocktail?random=#{rand(1..300)}" %>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= url %>)">
-        <%= link_to cocktail.name, cocktail_path(cocktail) %>
+      <div data-aos="fade-up">
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= url %>)">
+          <%= link_to cocktail.name, cocktail_path(cocktail) %>
+        </div>
       </div>
     <% end %>
   </div>
