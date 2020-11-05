@@ -1,0 +1,12 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://cdn.pixabay.com/photo/2016/05/27/10/51/cocktails-1419481_1280.png);">
+  <div class="container">
+    <h1>Cocktails!</h1>
+    <p>Hi Jess, how are you?</p>
+    <%= link_to "Create a New Cocktail", new_cocktail_path, class: "btn btn-success" %>
+  </div>
+</div>
+<div class="container">
+  <% @cocktails.each do |cocktail| %>
+    <%= link_to cocktail.name, cocktail_path(cocktail) %>
+  <% end %>
+</div>
