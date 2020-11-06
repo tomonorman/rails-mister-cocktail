@@ -41,4 +41,18 @@
   to { top: -7500px; transform: translateZ(-2500px) rotateX(21deg) }
 }
 
+@media (min-width: 100px) and (max-width: 575px) {
+  .scroll-text {
+    animation: scroll 240s linear forwards;
+    font-size: 3vw;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .scroll-text {
+    animation: scroll 240s linear forwards;
+    font-size: 3vw;
+  }
+}
 
