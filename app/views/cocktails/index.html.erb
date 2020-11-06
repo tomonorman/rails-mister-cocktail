@@ -10,7 +10,7 @@
     <% @cocktails.each do |cocktail| %>
       <% url = "https://loremflickr.com/320/240/cocktail?random=#{rand(1..300)}" %>
       <div data-aos="fade-up">
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= url %>)">
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cocktail.photo.attached? ? (cl_image_path cocktail.photo.key) : url %>)">
           <%= link_to cocktail.name, cocktail_path(cocktail) %>
         </div>
       </div>
